@@ -1,0 +1,53 @@
+<!-- hide-nav-bar="true" hide the top nav bar -->
+<ion-view view-title="Home" hide-nav-bar="true">
+    <ion-content>
+
+        <video src="https://firebasestorage.googleapis.com/v0/b/joyfood-database.appspot.com/o/hong-kong.hotel.mp4?alt=media&token=3ab5a988-e751-4b2d-868c-9e0db899d4dd"
+            autoplay="autoplay" loop="loop" width="100%"></video>
+
+        <div class="myTitle1">
+            <p>The perfect Hong Kong harbour view, delicious local and international cuisine, cocktails on the club floor, the ultimate rooms for comfort and style, heartfelt service, a stylish pool and spa floor, thoughtful details and all right in the heart of Tsim Sha Tsui.
+            </p>
+        </div>
+           
+        <div class="myTitle">
+            <h2>FACILITIES & SERVICES</h2>
+        </div>
+            
+        <ion-slide-box does-continue="true" auto-play="true" slide-interval="10000" pager-click="go(index)">
+            <ion-slide>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fir-2d772.appspot.com/o/hotel%2Fpool.jpg?alt=media&token=9386bbe9-9be8-4ba5-a004-ebb2b8cbe0a0" 
+                    alt="Pool" width="100%" >
+                <p class="myTitle1">
+                    Overlooking Hong Kong's iconic harbour and skyline, there are few more inspiring places to keep fit with a few lengths. Set on a rooftop on Level 9, the heated swimming pool offers swimmers a relaxing, outdoor experience far from the madding crowd - providing infinite luxury and relaxation.                        
+                </p>
+            </ion-slide>
+            <ion-slide>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fir-2d772.appspot.com/o/hotel%2Fgym.jpg?alt=media&token=f6eb2826-e9f5-4ba6-83d2-1dbc265f59e7" 
+                    alt="Gym" width="100%">
+                <p class="myTitle1">
+                    The 24hr harbour-facing fitness centre provides latest Technogym cardiovascular and weight training equipment. The stunning panoramic view of Tsim Sha Tsui makes this one place you will enjoy working out.
+                    <br>
+                    Personal trainer available.
+                </p>
+            </ion-slide>
+            <ion-slide>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fir-2d772.appspot.com/o/hotel%2Fspa.jpg?alt=media&token=f6a5ab64-de7b-4d4c-8992-ade020c86610" 
+                    alt="SPA" width="100%">
+                <p class="myTitle1">
+                    When work, travel or even retail therapy has taken its toll, take time out to discover the Angsana Spa by Banyan Tree. A legendary name in wellness, Angsana offers a wide choice of beauty, health and massage treatments in four sleek, contemporary treatment rooms. Start or finish your relaxation journey with time in our health club and pool for the ultimate battery recharge.
+                </p>
+            </ion-slide>
+            <ion-slide>
+                <img src="https://firebasestorage.googleapis.com/v0/b/fir-2d772.appspot.com/o/hotel%2Fbreakfast.jpg?alt=media&token=f63aaebf-ef91-40d8-90a4-1e43bde7196d" 
+                    alt="Restaurant" width="100%">
+                <p class="myTitle1">
+                    One of the city's most celebrated Cantonese restaurants, Above & Beyond's breathtaking cuisine matches its sweeping views of Hong Kong.
+                </p>
+            </ion-slide>
+        </ion-slide-box>
+
+    <div ng-include="'../templates/footer.html'"></div>
+
+    </ion-content>
+</ion-view>

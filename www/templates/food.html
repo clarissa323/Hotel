@@ -1,0 +1,28 @@
+<ion-view view-title="FOOD">
+    <ion-content class="padding">
+
+        <ion-list>
+            <ion-item class="item-text-wrap" ng-repeat="fd in fooddata | filter: {ID:whichfood}">
+                <a href="{{fd.src}}"><img ng-src="{{fd.src}}" alt="Food" width="100%"></a>
+                <h1 class="myTitle1">{{fd.name}}</h1>
+                <h2 class="myTitle3">{{fd.text}}</h2>
+                <hr>
+                <p>{{fd.detail}}</p>
+            </ion-item>
+        </ion-list>
+
+        <div class="item item-text-wrap">
+                <h1 class="myTitle1">RESTAURANT</h1>
+                <h3 class="myTitle1">Location: Lobby</h3><br>
+                <p style="text-align:center">
+                  Reservations Enquiry: (+46) 3400 1300
+                </p>
+                <p style="text-align:center"><a style="color:grey;" href="mailto:admin@yangshan.dx.am">Mail To: admin@hotel.dx.am</a></p>
+                <p style="text-align:center">Opening Hours: 07:00 - 00:00</p>
+              </div>
+
+        <br>
+        <div ng-include="'../templates/footer.html'"></div>
+   
+    </ion-content>
+</ion-view>

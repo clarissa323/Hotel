@@ -1,0 +1,132 @@
+<ion-view view-title="Book A Room" hide-nav-bar="true">
+  <ion-content class="padding, myBook">
+
+    <ion-slide-box auto-play="true" slide-interval="10000" does-continue="true" ng-if="rooms" pager-click="goto(index)">
+      <ion-slide ng-repeat="room in rooms">
+        <a href="{{room.src}}"><img ng-src="{{room.src}}"" alt="Room" width="100%" ></a>
+        <h3 class="myTitle1">{{room.name}}</h3>
+        <p class="myTitle1">
+          {{room.text}}                        
+        </p>
+        <h5 class="padding">Price: {{room.price}} kr</h5>
+      </ion-slide>             
+     </ion-slide-box>
+
+     <hr>
+     <h2 class="myTitle">Book A Room</h2>
+
+      <form name="bookingForm" class="padding"">
+        <label class="item item-input item-stacked-label">
+          <span><b>Arrival Date:</b></span>
+          <input type="date" name="adate" ng-model="reservations.adate" min="{{setMinADate()}}">
+        </label>
+
+        <!-- <label class="item item-input item-stacked-label">
+          <span><b>Nights: </b></span>
+          <select ng-model="reservations.nights">  -->
+            <!-- can not enter before or after {{n}}, it will make ng-model's value \n -->
+            <!-- <option ng-repeat="n in nums">{{n}}</option>
+          </select>
+        </label> -->
+
+        <label class="item item-input item-stacked-label">
+          <span><b>Departure Date:</b></span>
+          <input type="date" name="ddate" ng-model="reservations.ddate" min="{{setMinADate()}}">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span><b>Choose a room:  *</b></span>
+          <select ng-model="selected.room" ng-options="r.name+' '+r.price+'kr' for r in rooms" ></select>          
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span><b>Adults: </b></span>
+          <select ng-model="reservations.adults">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span><b>Child (below 13): </b></span>
+          <select ng-model="reservations.child">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>First Name:  *</b></span>
+          <span ng-show="bookingForm.fname.$error.required" class="warnmsg">First name is empty!</span>
+          <input type="text" id="fname" name="fname" placeholder="Your First Name" ng-model="reservations.fname" required>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Last Name:  *</b></span>
+          <span ng-show="bookingForm.lname.$error.required" class="warnmsg">Last name is empty!</span>
+          <input type="text" name="lname" id="lname" placeholder="Your Last Name" ng-model="reservations.lname" required>
+        </label>
+
+        <label class="item item-input item-stacked-label">
+            <span><b>Gender: </b></span>
+            <select ng-model="reservations.gender">
+              <option value="0">Male</option>
+              <option value="1">Female</option>
+              <option value="2">Other</option>
+            </select>
+          </label>
+
+          <label class="item item-input item-stacked-label">
+            <span class="input-label"><b>E-mail:  *</b></span>
+            <span ng-show="bookingForm.email.$error.required" class="warnmsg">Email is empty!</span>
+            <span ng-show="bookingForm.email.$error.email" class="errormsg">
+              Enter a valid email address!
+            </span>
+            <input type="email" name="email" id="email" placeholder="Your Email" ng-model="reservations.email" required>
+          </label>
+
+          <label class="item item-input item-stacked-label">
+            <span class="input-label"><b>Mobile:  *</b></span>
+            <span ng-show="bookingForm.mobile.$error.required" class="warnmsg">Mobile number is empty!</span>
+            <input type="text" name="mobile" id="mobile" placeholder="Your Mobile Phone" ng-model="reservations.mobile" required>
+          </label>
+
+          <br><p><b>Total Price: </b> 
+          <span>{{getTotal()}}</span></p>
+
+          <!-- <a href="#/tab/bookingconfirm"> -->
+            <button class="button button-block button-dark" ng-click="checkBook()">BOOK</button>
+          <!-- </a> -->
+
+          <p class="errormsg" ng-show="bookingForm.fname.$error.required || 
+          bookingForm.lname.$error.required || bookingForm.email.$error.required || 
+          bookingForm.mobile.$error.required || reservations.price==null || msgshow">
+            {{errormsg}}
+          </p>
+          
+
+      </form>
+
+      <!-- for testing -->
+      <!-- <div class="item item-text-wrap">
+        <p>factory get: {{sendmsg}}</p>
+      </div>
+
+      <div class="item item-text-wrap">
+        reservations: {{reservations}}
+        <br><br>
+        room selected: {{selected}}
+      </div>
+
+      <h3>Response från get</h3>
+      <div>
+        {{request}}
+      </div> -->
+
+      <div ng-include="'../templates/footer.html'"></div>
+
+    </ion-content>
+ </ion-view>

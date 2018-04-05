@@ -1,0 +1,37 @@
+<ion-view view-title="Dine" hide-nav-bar="true">
+    <ion-content>
+
+      <ion-list>
+        <ion-item class="item-text-wrap" ng-repeat="f in fooddata" href="#/tab/dine/{{f.ID}}">
+          <!--  加上class row-wrap则可以实现多行 -->
+            <div class="row row-wrap">
+              <div class="col col-25">
+                <a href="{{f.src}}"><img ng-src="{{f.src}}" alt="Food1" height="75px"></a>
+              </div>
+              <div class="col col-75 listpadding" >
+                <span><b>{{f.name}}</b></span><br><br>
+                <span>{{f.text}}</span>
+              </div>
+            </div>             
+        </ion-item>
+      </ion-list>
+
+      <div class="item item-text-wrap">
+        <h1 class="myTitle1">RESTAURANT</h1>
+        <h3 class="myTitle1">Location: Lobby</h3><br>
+        <p style="text-align:center">
+          Reservations Enquiry: (+46) 3400 1300
+        </p>
+        <p style="text-align:center"><a style="color:grey;" href="mailto:admin@yangshan.dx.am">Mail To: admin@hotel.dx.am</a></p>
+        <p style="text-align:center">Opening Hours: 07:00 - 00:00</p>
+      </div>
+
+        <!-- for testing -->
+        <!-- <h3>Response från get</h3>
+        <div>
+          {{fooddata}}
+        </div> -->
+
+      <div ng-include="'../templates/footer.html'"></div>
+    </ion-content>
+ </ion-view>

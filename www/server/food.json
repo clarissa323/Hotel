@@ -1,0 +1,25 @@
+[
+    {
+        "ID": 1,
+      "name":"GODIVA SOFT SERVE",
+      "text":"This spring, we invites you for a scrumptious afternoon tea experience, made event sweeter with luscious GODIVA Soft Serve.",
+      "src":"https://firebasestorage.googleapis.com/v0/b/fir-2d772.appspot.com/o/hotel%2Ffood1.jpg?alt=media&token=31e6d0d9-fd05-47d6-bc35-61942d04345a",
+      "detail":"Relax in our sunlit dining room, surrounded by lush vertical gardens and sip on a steaming pot of tea or coffee before whetting your appetite with savoury specialties like Parma Ham with Figs and Scottish Smoked Salmon with Horseradish Cream. Next, award-winning Executive Pastry Chef Danny Ho’s freshly baked creations steal the spotlight, from classic Scones served with clotted cream and homemade jam to the newly added Cupcakes served now the heavenly GODIVA Soft Serve. Unlimited GODIVA Soft Serve, a complimentary GODIVA chocolate gift, and a 15% discount on takeaway treats at GODIVA’s “Spring Celebrations” trolley take this divine afternoon tea to a whole new level of decadence."
+      
+    },
+    {
+        "ID": 2,
+      "name":"WILD AND RARE RED-FLESH DURIAN DESSERTS",
+      "text":"All prices are subject to 10% service charge.",
+      "src":"https://firebasestorage.googleapis.com/v0/b/fir-2d772.appspot.com/o/hotel%2Ffood2.jpg?alt=media&token=e57ed839-a18d-4204-ac3b-dff99347d5a8",
+      "detail":"Be among the first to try the seasonal Sabah red durian in Hong Kong, available only in March at The Market. Durian Merah - 'red durian' in Malay - are only in season once a year in the state of Sabah, Malaysia. They are planted in humid lowland areas below 800m elevation near Sandakan and Tenom in Sabah and may now be the only places that some of these wild species can be seen. In his new creations, Executive Pastry Chef Danny Ho, also known as the Durian Prince will combine the precious Durian Merah flesh with the finest D24 and Maoshanwang durians for creamy and intensely-flavoured desserts. Stunning new creations will include the Durian Merah Chocolate Pops, Char-grilled Durian Kaya Toast, Durian Nougat Sandwich Cookie, Durian Almond Stick and Durian Pineapple Bun."
+
+      },
+      {
+        "ID": 3,
+        "name":"ODE TO SPRING",
+        "text":"Three Private Dining rooms and an exclusive private Chef’s table in a wine room await you.",
+        "src":"https://firebasestorage.googleapis.com/v0/b/fir-2d772.appspot.com/o/hotel%2Ffood3.jpg?alt=media&token=9e91ddea-a649-43f5-95b5-d25e4ba35b39",
+        "detail": "Now that the weather is warming up, using the most refined Chinese cooking methods combined with the best ingredients, Chef Paul Tsui has created a delicious spring menu of seasonal Cantonese specialties and classic favourites. Having won numerous praise and awards, including three ‘fork-and-spoons’ in the 2017 Michelin Guide to Hong Kong and Macau, ‘Award of Excellence’ in 2016 Restaurant Wine List Awards, the restaurant’s enticing spring menu perfectly illustrates the culinary team’s sophisticated techniques in crafting authentic Cantonese cuisine. In particular, the Double-boiled Pork Rib Soup with Apple, Lily Bulbs and Figs and Deep-fried Sea Cucumber stuffed with Shrimp and Pork are not to be missed."
+      }
+  ]

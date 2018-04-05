@@ -1,0 +1,83 @@
+<ion-view view-title="Booking Confirmation">
+    <ion-content class="padding">
+
+      <form name="bookingForm" class="padding" ng-submit="submit()">
+        <label class="item item-input item-stacked-label">
+          <span><b>Arrival Date:</b></span>
+          <input type="date" name="adate" ng-model="bookinfo.adate" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span><b>Nights: </b></span>
+          <input type="text" name="nights" ng-model="bookinfo.nights" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span><b>Departure Date:</b></span>
+          <input type="date" name="ddate" ng-model="bookinfo.ddate" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span><b>Chosen room: </b></span>
+          <input type="text" name="room" ng-model="roomchosen" readonly="true">          
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span><b>Adults: </b></span>
+          <input type="text" name="adults" ng-model="bookinfo.adults" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span><b>Child (below 13): </b></span>
+          <input type="text" name="child" ng-model="bookinfo.child" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>First Name:  *</b></span>
+          <input type="text" name="fname" ng-model="bookinfo.fname" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Last Name:  *</b></span>
+          <input type="text" name="lname" ng-model="bookinfo.lname" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span><b>Gender: </b></span>
+          <input type="text" name="gender" ng-model="bookinfo.gender" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>E-mail:  *</b></span>
+          <input type="email" name="email" ng-model="bookinfo.email" readonly="true">
+        </label>
+    
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Mobile:  *</b></span>
+          <input type="text" name="mobile" ng-model="bookinfo.mobile" readonly="true">
+        </label>
+    
+        <br><p><b>Total Price: </b> 
+        <span>{{bookinfo.total}} kr</span></p>
+    
+        <input class="button button-block button-dark" type="submit" name="submit" value="CONFIRM" ng-show="ifshow">
+
+        <p class="errormsg" ng-show="!ifshow">{{nobookmsg}}</p>
+        <button class="button button-block button-stable" ng-show="!ifshow" ng-click="backPre()">BACK</button>
+    
+      </form>
+
+      <!-- for testing -->
+        <!-- <div class="item item-text-wrap">
+            Booking Information: {{bookinfo}}
+        </div>
+
+        <h3>Response from server after post</h3>
+        <div class="item item-text-wrap">
+          {{response}}
+        </div> -->
+
+      <div ng-include="'../templates/footer.html'"></div>
+
+    </ion-content>
+</ion-view>

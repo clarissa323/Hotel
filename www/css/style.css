@@ -1,0 +1,43 @@
+/* Empty. Add your own CSS if you like */
+.myTitle {
+    text-align: center;
+    margin:auto;
+    margin-top: 20px;
+}
+.myTitle1 {
+    color:	#796400;
+    text-align: center;
+    margin:auto;
+    margin: 10px;
+}
+.myTitle3 {
+    color:	#796400;
+    margin:auto;
+    margin: 10px;
+}
+.myBook{
+    background-color: white;
+    color: black;   
+}
+.myFooter{
+    background-color: black;
+    color: white; 
+    text-align: center;
+}
+.errormsg{
+    color: red;
+    font-size: 13px;
+}
+.warnmsg{
+    /* color: rgb(255, 145, 0); */
+    color:#796400;
+    font-size: 13px;
+}
+a{ text-decoration:none} 
+
+.listpadding{
+    padding-left: 55px;
+    text-align: left
+}
+
+
